@@ -11,18 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721194843) do
+ActiveRecord::Schema.define(version: 20150721202125) do
 
   create_table "addresses", force: :cascade do |t|
-    t.text "address"
-    t.text "city"
-    t.text "state"
-    t.text "zip"
+    t.text    "address"
+    t.text    "city"
+    t.text    "state"
+    t.text    "zip"
+    t.integer "student_id"
   end
 
   create_table "students", force: :cascade do |t|
     t.text    "name"
     t.boolean "is_alumni", default: false
   end
+
 
 end
