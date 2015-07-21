@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721194421) do
+ActiveRecord::Schema.define(version: 20150721194843) do
 
   create_table "addresses", force: :cascade do |t|
     t.text "address"
@@ -21,7 +21,8 @@ ActiveRecord::Schema.define(version: 20150721194421) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.text "name"
+    t.text    "name"
+    t.boolean "is_alumni", default: false
   end
 
 end
